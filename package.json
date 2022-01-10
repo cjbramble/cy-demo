@@ -23,5 +23,8 @@
         "*.js": "eslint --cache --fix",
         "*.{js,css,md}": "prettier --write",
         "cypress/integration/**/*.js": "prettier --write"
+    },
+    "dependencies": {
+        "community-faker": "^5.5.5"
     }
 }
