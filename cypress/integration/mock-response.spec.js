@@ -25,14 +25,14 @@ describe("Can submit message", () => {
     });
 
     it("Displays stubbed response", () => {
-        cy.intercept("POST", "https://automationintesting.online/#/message/", {
-            fixture: "message_payload.json",
-        }).as("postMessage");
+        cy.intercept("POST", "**/message/", {
+            fixture: "message_payload.json"
+        }
+        ).as("postMessage");
 
         cy.visit("/");
 
-        cy.wait("@postMessage").then((interception) => {
-            cy.get("#submitContact").click();
-        });
+        cy.get("#submitContact").click();
+        cy.wait("@postMessage");
     });
 });
