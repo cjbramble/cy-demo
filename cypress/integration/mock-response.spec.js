@@ -26,9 +26,8 @@ describe("Can submit message", () => {
 
     it("Displays stubbed response", () => {
         cy.intercept("POST", "**/message/", {
-            fixture: "message_payload.json"
-        }
-        ).as("postMessage");
+            fixture: "message_payload.json",
+        }).as("postMessage");
 
         cy.visit("/");
 
