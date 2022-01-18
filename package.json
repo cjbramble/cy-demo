@@ -6,7 +6,7 @@
         "format": "prettier --write ."
     },
     "devDependencies": {
-        "cypress": "^8.3.0",
+        "cypress": "^9.2.0",
         "eslint": "^7.29.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-config-standard": "^16.0.3",
@@ -23,5 +23,8 @@
         "*.js": "eslint --cache --fix",
         "*.{js,css,md}": "prettier --write",
         "cypress/integration/**/*.js": "prettier --write"
+    },
+    "dependencies": {
+        "community-faker": "^5.5.5"
     }
 }
