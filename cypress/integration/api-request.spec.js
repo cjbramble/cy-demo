@@ -43,7 +43,7 @@ describe("Can interact with API", () => {
                 expect(status).to.eq(201);
             })
             .then(({ body }) => {
-                expect(body).to.have.property('name', "Delia Wehner") // can validate in different ways
+                expect(body).to.have.property("name", "Delia Wehner"); // can validate in different ways
             });
     });
 
@@ -66,7 +66,7 @@ describe("Can interact with API", () => {
                 expect(status).to.eq(400);
             })
             .then(({ body }) => {
-                expect(body).to.have.property('error', "BAD_REQUEST")
+                expect(body).to.have.property("error", "BAD_REQUEST");
             });
     });
 });
